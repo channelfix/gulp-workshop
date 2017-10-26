@@ -1,0 +1,99 @@
+body {
+    background: var(--body-background-color) center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("../../images/background.jpg");
+}
+
+#site-header {
+    border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+main.wrapper {
+    display: flex;
+    width: 82rem;
+    padding-top: 7rem;
+}
+
+
+/** Welcome text  */
+
+.welcome-text {
+    flex-grow: 1;
+    margin-right: 7rem;
+    color: #fff;
+}
+
+.welcome-text h1 {
+    margin: 0;
+    margin-bottom: 3rem;
+    font-size: 2.8rem;
+}
+
+.welcome-text p {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+
+/** Authentication forms **/
+
+.auth-forms {
+    flex-shrink: 0;
+    width: 30rem;
+}
+
+.auth-form {
+    border: 1px solid var(--gray-1);
+    background-color: #fff;
+}
+
+.auth-form:not(:last-child) {
+    margin-bottom: 1.2rem;
+}
+
+.auth-form .form-header {
+    padding: 1.2rem;
+    border-bottom: 1px solid var(--gray-1);
+}
+
+.auth-form .form-body {
+    padding: 1.2rem;
+}
+
+.auth-form .form-error {
+    margin: 0;
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--danger-color);
+}
+
+.login-form .actions {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.login-form .actions label {
+    color: var(--gray-3);
+}
+
+.login-form .actions a {
+    color: var(--primary-color);
+}
+
+.login-form .actions .separator {
+    margin: 0 0.4rem;
+    font-weight: 600;
+    color: var(--gray-3);
+}
+
+.signup-form .form-title {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.signup-form .form-title span {
+    color: var(--gray-3);
+}

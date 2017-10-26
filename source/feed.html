@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Twitter Clone</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600">
+        <link rel="stylesheet" href="static/stylesheets/abstracts/variables.css">
+        <link rel="stylesheet" href="static/stylesheets/base/reset.css">
+        <link rel="stylesheet" href="static/stylesheets/base/base.css">
+        <link rel="stylesheet" href="static/stylesheets/base/utilities.css">
+        <link rel="stylesheet" href="static/stylesheets/components/buttons.css">
+        <link rel="stylesheet" href="static/stylesheets/components/dropdowns.css">
+        <link rel="stylesheet" href="static/stylesheets/components/cards/cards.css">
+        <link rel="stylesheet" href="static/stylesheets/components/cards/follow-card.css">
+        <link rel="stylesheet" href="static/stylesheets/components/cards/profile-card.css">
+        <link rel="stylesheet" href="static/stylesheets/components/menus.css">
+        <link rel="stylesheet" href="static/stylesheets/components/stats.css">
+        <link rel="stylesheet" href="static/stylesheets/components/tweetbox.css">
+        <link rel="stylesheet" href="static/stylesheets/layout/header.css">
+        <link rel="stylesheet" href="static/stylesheets/layout/page.css">
+        <link rel="stylesheet" href="static/stylesheets/pages/feed.css">
+    </head>
+
+    <body>
+        <header id="site-header">
+            <div class="wrapper">
+                <nav class="header-nav">
+                    <a class="header-nav-item header-nav-item--selected" href="/">
+                        <img src="static/images/home.svg" alt="Twitter Logo">
+                        Home
+                    </a>
+                </nav>
+
+                <div class="user-actions dropdown js-dropdown">
+                    <img class="user-avatar dropdown-trigger js-dropdown-trigger" src="static/images/default-avatar.png" alt="arnellebalane">
+                    <div class="dropdown-content dropdown-content--hidden js-dropdown-content">
+                        <ul class="menu">
+                            <li class="menu-item user-details">
+                                <a href="#">
+                                    <h4>Arnelle Balane</h4>
+                                    <p>@arnellebalane</p>
+                                </a>
+                            </li>
+                            <li class="menu-separator"></li>
+                            <li class="menu-item"><a href="#">Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="wrapper page-container">
+            <aside class="sidebar">
+                <section class="card profile-card">
+                    <img class="cover-photo" src="static/images/default-cover.jpg" alt="Arnelle Balane">
+
+                    <header>
+                        <img class="user-avatar" src="static/images/default-avatar.png" alt="Arnelle Balane">
+                        <h1><a href="#">Arnelle Balane</a></h1>
+                        <h2><a href="#">@arnellebalane</a></h2>
+                    </header>
+
+                    <ul class="stats">
+                        <li class="stat">
+                            <p class="stat-label">Tweets</p>
+                            <p class="stat-value">1,335</p>
+                        </li>
+                        <li class="stat">
+                            <p class="stat-label">Following</p>
+                            <p class="stat-value">140</p>
+                        </li>
+                        <li class="stat">
+                            <p class="stat-label">Followers</p>
+                            <p class="stat-value">87</p>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+
+            <main class="content">
+                <form class="tweetbox" action="#" method="post">
+                    <img class="avatar" src="static/images/default-avatar.png" alt="Arnelle Balane">
+                    <textarea class="tweet-input" name="tweet" maxlength="140" placeholder="What's happening?"></textarea>
+                </form>
+            </main>
+
+            <aside class="sidebar">
+                <section class="card follow-card">
+                    <header class="card-header">
+                        <h3 class="card-title">Who to follow</h3>
+                        <span class="separator">·</span>
+                        <a class="card-link" href="#">Refresh</a>
+                        <span class="separator">·</span>
+                        <a class="card-link" href="#">View all</a>
+                    </header>
+
+                    <ul class="card-section people">
+                        <li class="person">
+                            <img class="avatar" src="static/images/default-avatar.png" alt="First Suggestion">
+                            <div class="details">
+                                <p class="name">First Suggestion <span class="username">@firstsuggestion</span></p>
+                                <button class="btn btn-outline btn-primary btn-small">Follow</button>
+                            </div>
+                        </li>
+                        <li class="person">
+                            <img class="avatar" src="static/images/default-avatar.png" alt="Second Suggestion">
+                            <div class="details">
+                                <p class="name">Second Suggestion <span class="username">@secondsuggestion</span></p>
+                                <button class="btn btn-outline btn-primary btn-small">Follow</button>
+                            </div>
+                        </li>
+                        <li class="person">
+                            <img class="avatar" src="static/images/default-avatar.png" alt="Third Suggestion">
+                            <div class="details">
+                                <p class="name">Third Suggestion <span class="username">@thirdsuggestion</span></p>
+                                <button class="btn btn-outline btn-primary btn-small">Follow</button>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+            </aside>
+        </div>
+
+        <script src="static/javascripts/base/utilities.js"></script>
+        <script src="static/javascripts/components/dropdowns.js"></script>
+    </body>
+</html>
