@@ -29,4 +29,6 @@
         content.classList.add(dropdownContentHiddenClass);
     }
 
+    console.error('Chill! This error is intentional!');
+
 })();
