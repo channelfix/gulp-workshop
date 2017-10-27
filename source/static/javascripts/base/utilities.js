@@ -1,7 +1,7 @@
-function $(selector, context=document) {
-    return context.querySelector(selector);
+function $(selector, context) {
+    return (context || document).querySelector(selector);
 }
 
-function $$(selector, context=document) {
-    return Array.from(context.querySelectorAll(selector));
+function $$(selector, context) {
+    return Array.from((context || document).querySelectorAll(selector));
 }

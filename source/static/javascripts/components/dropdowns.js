@@ -1,27 +1,31 @@
-(() => {
+(function() {
 
-    const dropdowns = [];
-    const dropdownContentHiddenClass = 'dropdown-content--hidden';
+    var dropdowns = [];
+    var dropdownContentHiddenClass = 'dropdown-content--hidden';
 
     $$('.js-dropdown').forEach(initializeDropdown);
 
-    document.addEventListener('click', () => dropdowns.forEach(closeDropdown));
+    document.addEventListener('click', function() {
+        dropdowns.forEach(closeDropdown);
+    });
 
     function initializeDropdown(dropdown) {
         dropdowns.push(dropdown);
-        const trigger = $('.js-dropdown-trigger', dropdown);
-        const content = $('.js-dropdown-content', dropdown);
+        var trigger = $('.js-dropdown-trigger', dropdown);
+        var content = $('.js-dropdown-content', dropdown);
 
-        trigger.addEventListener('click', e => {
+        trigger.addEventListener('click', function(e) {
             e.stopPropagation();
             content.classList.toggle(dropdownContentHiddenClass);
         });
 
-        content.addEventListener('click', e => e.stopPropagation());
+        content.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
     }
 
     function closeDropdown(dropdown) {
-        const content = $('.js-dropdown-content', dropdown);
+        var content = $('.js-dropdown-content', dropdown);
         content.classList.add(dropdownContentHiddenClass);
     }
 
